@@ -1,0 +1,140 @@
+body{
+    background-color: white;
+}
+.search-box{
+    margin-top: 10px;
+    display: flex;
+    background-color: rgb(77, 74, 74);
+    padding: 4px;
+    height: 35px;
+}
+#search{
+    border-radius: 6px;
+    height: 30px;
+    width: 90%;
+    font-size: 17px;
+    color: black;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+#shoppingcart{
+    height: 40px;
+    width: 80px;
+    margin-left: 30px;
+}
+#newproduct{
+    width:300px;
+    height: 300px;
+    margin-left: 38%;
+}
+.information{
+    background-color: rgb(110, 48, 48);
+    width: 100%;
+}
+.information p{
+    font-size: 23px;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+}
+.d-products{
+    display: flex;
+    gap: 30px;
+}
+.d-products img{
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+}
+.d-products a button{
+    background-color: gray;
+    border-radius: 3px;
+    color: aliceblue;
+}
+.d-products a button:hover{
+    background-color: rgb(73, 12, 12);
+    cursor: pointer;
+}
+#d-product-1{
+    text-align: center;
+}
+.topproducts{
+    display: flex;
+}
+.topproducts p{
+    margin-top: 100px;
+    margin-left: 200px;
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+
+/*animations and transitions*/
+@keyframes slideInLeft{
+    from{
+       transform: translateX(-100px); 
+    }
+    to{
+        transform: translateX(100px); 
+    }
+}
+.new-products{
+    animation-name: slideInLeft;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+/*display on media screen*/
+@media screen and (max-width: 568px){
+    @keyframes slideInLeft{
+        from{
+           transform: translateX(-50px); 
+        }
+        to{
+            transform: translateX(30px); 
+        }
+    }
+    .new-products{
+        animation-name: slideInLeft;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+    }
+    .topproducts p{
+        margin-top: 30px;
+        margin-left: 40px;
+        color: blue;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+    }
+    
+    #d-product-1{
+        font-size: 11px;
+    }
+    .d-products{
+        display: flex;
+        gap: 10px;
+    }
+    .d-products img{
+        width: 100px;
+        height: 100px;
+        margin-left: 0;
+    }
+    #newproduct{
+        width:150px;
+        height: 150px;
+        margin-left: 30%;
+     }
+    .information p{
+        font-size: 15px;
+        color: aliceblue;
+        text-align: center;
+        padding: 10px;
+    }
+}
